@@ -34,16 +34,6 @@
     box-sizing: border-box;
 }
 
-.header{
-    background-image: url(../images/Backgroound_Picture.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 668px;
-    /* clip-path polygon cuts the end of the main background picture*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 81%, 0% 100%);
-}
-
 .comment_text{
     font-family: "IBM_Plex_Sans_Regular";
     font-style: normal;
@@ -62,6 +52,16 @@
     color: #A3CC40;   
 }
 /*Navigation*/
+.header{
+    background-image: url(../images/Backgroound_Picture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 668px;
+    /* clip-path polygon cuts the end of the main background picture*/
+    clip-path: polygon(0% 0%, 100% 0%, 100% 81%, 0% 100%);
+}
+
 nav{
     display: flex;
 }
@@ -170,20 +170,110 @@ nav{
 .why_us{
     padding: 0 0 0 135px;
 }
+.why_us_first_row{
+    display: flex;
+}
+.why_us_second_row{
+    display: flex;
+    margin-top: 35px;
+}
 .why_us h2{
     margin-top: 31px;
     margin-bottom: 82px;
 }
 .why_us_cards{
     text-align: center;
-    width: 33.3%;
-    padding-right: 55px;
-    
+    width: 245px;
+    padding-right: 55px;   
 }
 .why_us_cards img{
-    height: 169px;
-    width: 245px;
-    border-radius: 10px;
-    display: block;
-    justify-items: center;
+    border-radius: 10px;    
+}
+
+.why_us_cards h3{
+    font-family: "IBM_Plex_Sans_Semi_Bold";
+    font-size: 20px;
+    text-align: center;
+    font-style: normal;
+    line-height: 26px;
+    padding: 12px 0;
+}
+
+/*Why us section ends*/
+
+/*Choose film (table)*/
+.choose_film{
+    padding: 114px 0 0 140px;
+}
+
+/*Table*/
+.table {
+    border-collapse: separate; /*collaps was removed because of it border-radius didn't work*/
+    border-spacing: 0;
+    padding-top: 45px;
+}
+
+.table_head {
+    font-family: "IBM_Plex_Sans_Semi_Bold";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    background: #a3cc40;
+    color: #ffff;
+    text-align: left;
+    height: 45px;
+}
+th a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+th svg{
+    vertical-align: middle;
+}
+.t_body {
+   font-family: "IBM_Plex_Sans_Regular";
+   font-weight: 400;
+   font-style: normal;
+   font-size: 14px;
+   line-height: 14.2px;
+   color: #ffff;
+}  
+  
+  /*Styles for border-radius*/
+th.check {
+   border-radius: 10px 0 0 0;
+}
+th.cell_genre {
+   border-radius: 0 10px 0 0;
+}
+tbody tr:last-child td.cell_genre {
+   border-radius: 0 0 10px 0;
+}
+tbody tr:last-child td.check {
+   border-radius: 0 0 0 10px;
+}
+  
+.check {
+   width: 77px;
+}
+.cell_session {
+   width: 234px;
+}
+.cell_film_name {
+   width: 240px;
+}
+.cell_genre {
+   width: 287px;
+}
+  
+.check svg {
+   padding-left: 24px;
+}
+.first_row {
+   background-color: #373737;
+   height: 45px;
+}
+.second_row {
+   background-color: #4c4d4f;
+   height: 45px;
 }
